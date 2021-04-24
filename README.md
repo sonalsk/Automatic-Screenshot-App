@@ -1,7 +1,7 @@
-# ASCA
+# TASCA
 
 ## What?
-ASCA is an automatic screenshot capture application 
+TASCA is The Automatic Screenshot Capturing Application 
 
 ## Why?
 With ASCA you will never have to worry about taking screenshots during your online meetings or events! 
