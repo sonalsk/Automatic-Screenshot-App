@@ -40,8 +40,7 @@ public class App
 		Robot r = new Robot();
 		BufferedImage screenShot = r.createScreenCapture(screenRectangle);
 		String filename = "screenshot"+(num+1);
-		String foldername = "C:\\Users\\Piyush Sharma\\Desktop\\images\\";
-		ImageIO.write(screenShot, "jpeg", new File(foldername+filename));
+		ImageIO.write(screenShot, "jpeg", new File(filename));
 	}
 	
 	public static void timeBreak(int time) throws AWTException
