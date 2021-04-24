@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
 
-public class backend 
+public class App 
 {
 	public static void main(String[] args) throws IOException, AWTException
 	{
