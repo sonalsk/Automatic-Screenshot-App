@@ -56,7 +56,7 @@ public class App
 		int picSize = s.nextInt();
 		
 		// error handling for size
-		while ( picSize < 0 ) {
+		while ( picSize <= 0 ) {
 			System.out.println("ERROR: Less than 1 screenshot can not be taken!");
 			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
 			picSize = s.nextInt();
@@ -77,7 +77,7 @@ public class App
 		int time = s.nextInt();
 		
 		// error handling for time
-		while ( time < 0 ) {
+		while ( time <= 0 ) {
 			System.out.println("ERROR: Enter a time >= 1 second!");
 			System.out.println("Time duration between each screenshot? [In Seconds] = ");
 			time = s.nextInt();
