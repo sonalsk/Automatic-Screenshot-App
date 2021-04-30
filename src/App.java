@@ -53,8 +53,15 @@ public class App
 	{
 		Scanner s = new Scanner(System.in);
 		System.out.println("How many screenshots do you want to capture? = ");
-		int picSize = s.nextInt();
-		
+		int picSize;
+		try {
+			picSize = Integer.parseInt(s.next());
+		}
+		catch (NumberFormatException exception){
+			System.out.println("ERROR: The number of screenshot must be in integers");
+			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
+			picSize = s.nextInt();
+		}
 		// error handling for size
 		while ( picSize <= 0 ) {
 			System.out.println("ERROR: Less than 1 screenshot can not be taken!");
@@ -66,16 +73,18 @@ public class App
 			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
 			picSize = s.nextInt();
 		}
-		// this does not work because int already stores the value and returns error
-		while (picSize != (int)picSize) {
-			System.out.println("ERROR: The number of screenshot must be in integers");
-			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
-			picSize = s.nextInt();
-		}
+
 		
 		System.out.println("Time duration between each screenshot? [In Seconds] = ");
-		int time = s.nextInt();
-		
+		int time;
+		try {
+			time = Integer.parseInt(s.next());
+		}
+		catch (Exception e){
+			System.out.println("ERROR: The time duration must be in integers!");
+			System.out.println("Time duration between each screenshot? [In Seconds] = ");
+			time = s.nextInt();
+		}
 		// error handling for time
 		while ( time <= 0 ) {
 			System.out.println("ERROR: Enter a time >= 1 second!");
@@ -88,15 +97,9 @@ public class App
 			time = s.nextInt();
 		}
 		// this does not work because int already stores the value and returns error
-		while (time != (int)time) {
-			System.out.println("ERROR: The time duration must be in integers!");
-			System.out.println("Time duration between each screenshot? [In Seconds] = ");
-			time = s.nextInt();
-		}
 		
 		s.close();
-		int[] arr = {picSize, time};
-		return arr;
+		return new int[]{picSize, time};
 	}
 	
 	public static void runningScreenshot(int picSize, int time) throws IOException, AWTException 
