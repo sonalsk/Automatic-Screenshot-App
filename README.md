@@ -1,4 +1,4 @@
-# TASCA
+# TASCA : The Automatic Screenshot Capturing Application
 
 ## What?
 TASCA is The Automatic Screenshot Capturing Application 
