@@ -3,6 +3,8 @@
 ## What?
 TASCA is The Automatic Screenshot Capturing Application 
 
+To know more, watch the [project video.](https://www.youtube.com/watch?v=cDQ7xPcXl1E)
+
 ## Why?
 With ASCA you will never have to worry about taking screenshots during your online meetings or events! 
 
