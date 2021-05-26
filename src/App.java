@@ -39,7 +39,7 @@ public class App
 		Rectangle screenRectangle = new Rectangle(screenSize);
 		Robot r = new Robot();
 		BufferedImage screenShot = r.createScreenCapture(screenRectangle);
-		String filename = "screenshot"+(num+1);
+		String filename = "screenshot"+(num+1)+".jpeg";
 		ImageIO.write(screenShot, "jpeg", new File(filename));
 	}
 	
@@ -52,51 +52,55 @@ public class App
 	public static int[] inputVariables()
 	{
 		Scanner s = new Scanner(System.in);
-		System.out.println("How many screenshots do you want to capture? = ");
-		int picSize;
-		try {
-			picSize = Integer.parseInt(s.next());
-		}
-		catch (NumberFormatException exception){
-			System.out.println("ERROR: The number of screenshot must be in integers");
-			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
-			picSize = s.nextInt();
-		}
-		// error handling for size
-		while ( picSize <= 0 ) {
-			System.out.println("ERROR: Less than 1 screenshot can not be taken!");
-			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
-			picSize = s.nextInt();
-		}
-		while ( picSize > 100 ) {
-			System.out.println("ERROR: More than 100 screenshot can not be taken!");
-			System.out.println("How many screenshots do you want to capture? [Minimum 1 - Maximum 100] = ");
-			picSize = s.nextInt();
-		}
-
 		
-		System.out.println("Time duration between each screenshot? [In Seconds] = ");
+		int picSize;
+		while(true){
+			System.out.println("\nHow many screenshots do you want to capture?");
+			try {
+				picSize = Integer.parseInt(s.next());
+			}
+			catch (NumberFormatException exception){
+				System.out.println("ERROR: The number of screenshot must be in integers!");
+				continue;
+			}
+			// error handling for size
+			if ( picSize <= 0 ) {
+				System.out.println("ERROR: Less than 1 screenshot can not be taken!");
+				continue;
+			}
+			else if ( picSize > 100 ) {
+				System.out.println("ERROR: More than 100 screenshot can not be taken!");
+				continue;
+			}
+			else{
+				break;
+			}
+		}
+		
+		
 		int time;
-		try {
-			time = Integer.parseInt(s.next());
+		while(true){
+			System.out.println("\nTime duration between each screenshot? [In Seconds] = ");
+			try {
+				time = Integer.parseInt(s.next());
+			}
+			catch (NumberFormatException exception){
+				System.out.println("ERROR: The time duration must be in integers!");
+				continue;
+			}
+			// error handling for size
+			if ( time <= 0 ) {
+				System.out.println("ERROR: Enter a time >= 1 second!");
+				continue;
+			}
+			else if ( time > 3600 ) {
+				System.out.println("ERROR: Enter a time <= 3600 second!");
+				continue;
+			}
+			else{
+				break;
+			}
 		}
-		catch (Exception e){
-			System.out.println("ERROR: The time duration must be in integers!");
-			System.out.println("Time duration between each screenshot? [In Seconds] = ");
-			time = s.nextInt();
-		}
-		// error handling for time
-		while ( time <= 0 ) {
-			System.out.println("ERROR: Enter a time >= 1 second!");
-			System.out.println("Time duration between each screenshot? [In Seconds] = ");
-			time = s.nextInt();
-		}
-		while ( time > 3600 ) {
-			System.out.println("ERROR: Enter a time <= 3600 second!");
-			System.out.println("Time duration between each screenshot? [In Seconds] = ");
-			time = s.nextInt();
-		}
-		// this does not work because int already stores the value and returns error
 		
 		s.close();
 		return new int[]{picSize, time};
