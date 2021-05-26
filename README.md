@@ -16,7 +16,7 @@ Just enter the number of screenshots and their time duration and this app will a
 1. Fork this repository
 2. Clone it to your local machine
 3. Open terminal in the app/bin folder
-4. Execute the command "java App" 
+4. Execute the command "java app" 
 6. The application will load on the terminal
 
 ## SET UP ON IDE
