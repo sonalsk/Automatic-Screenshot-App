@@ -1,0 +1,10 @@
+# GIT IGNORE FILES
+# Please do not add the following files to the repo
+
+# "temporary" build files
+/target/
+
+# Other files
+/.classpath
+/*.project
+/.settings
