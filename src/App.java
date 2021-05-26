@@ -21,16 +21,18 @@ public class app
 		outroMsg();
 	}
 	
+	private static void introMsg() 
+	{
+		System.out.println("\n######################################################################\n");
+		System.out.println("Welcome to Automatic Screenshot Capture!");	
+		System.out.println("Developed by Piyush Sharma\n");
+	}
+	
 	private static void outroMsg() 
 	{
 		System.out.println("\nAll the screenshots have been saved!");
 		System.out.println("Thank you for using the app!");
-	}
-
-	private static void introMsg() 
-	{
-		System.out.println("Welcome to Automatic Screenshot Capture!");	
-		System.out.println("Developed by Piyush Sharma\n");
+		System.out.println("\n######################################################################\n");
 	}
 
 	public static void captureScreenShot(int num) throws IOException, AWTException
@@ -77,7 +79,6 @@ public class app
 			}
 		}
 		
-		
 		int time;
 		while(true){
 			System.out.println("\nTime duration between each screenshot? [In Seconds] = ");
@@ -108,12 +109,13 @@ public class app
 	
 	public static void runningScreenshot(int picSize, int time) throws IOException, AWTException 
 	{
+		System.out.println("Screenshot Capture has started!");
 		int total = picSize;
 		while ( picSize > 0 ) {
 			captureScreenShot(total-picSize);
 			timeBreak(time);
 			picSize--;
-			System.out.println("Screenshot " + (total-picSize) + " has been saved");
+			System.out.println("Screenshot " + (total-picSize) + " has been saved in bin folder");
 		}
 	}
 }
