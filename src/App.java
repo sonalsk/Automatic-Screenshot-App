@@ -25,7 +25,7 @@ public class app
 	{
 		System.out.println("\n######################################################################\n");
 		System.out.println("Welcome to Automatic Screenshot Capture!");	
-		System.out.println("Developed by Piyush Sharma\n");
+		System.out.println("Developed by Piyush Sharma");
 	}
 	
 	private static void outroMsg() 
@@ -109,13 +109,13 @@ public class app
 	
 	public static void runningScreenshot(int picSize, int time) throws IOException, AWTException 
 	{
-		System.out.println("Screenshot Capture has started!");
+		System.out.println("\nTASCA has started!\n");
 		int total = picSize;
 		while ( picSize > 0 ) {
 			captureScreenShot(total-picSize);
 			timeBreak(time);
 			picSize--;
-			System.out.println("Screenshot " + (total-picSize) + " has been saved in bin folder");
+			System.out.println("Screenshot " + (total-picSize) + " has been saved in bin folder of project");
 		}
 	}
 }
