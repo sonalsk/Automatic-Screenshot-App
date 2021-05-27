@@ -9,7 +9,6 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
@@ -52,7 +51,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -114,11 +112,6 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App.svg?style=for-the-badge
@@ -127,8 +120,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [forks-url]: https://github.com/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App/network/members
 [issues-shield]: https://img.shields.io/github/issues/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App.svg?style=for-the-badge
 [issues-url]: https://github.com/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/spiyush0212
 [product-screenshot]: img/example.png
