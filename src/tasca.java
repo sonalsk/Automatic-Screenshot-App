@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
 
-public class App 
+public class tasca 
 {
 	public static void main(String[] args) throws IOException, AWTException
 	{
