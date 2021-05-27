@@ -76,7 +76,7 @@ To get a local copy up and running follow these simple example steps
    git clone https://github.com/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App.git
    ```
 2. Open a terminal in the app/bin folder
-3. Execute the command `java App`
+3. Execute the command `java tasca`	
 
 ### IDE
 1. Clone the repo
@@ -84,7 +84,7 @@ To get a local copy up and running follow these simple example steps
    git clone https://github.com/spiyush0212/TASCA-The-Automatic-Screenshot-Capturing-App.git
    ```
 2. Open the app folder in your favorite IDE (for example: Eclipse, IntelliJ, ...)
-3. Run the file App.java
+3. Run the file tasca.java
 
 <!-- USAGE EXAMPLES -->
 ## Usage
