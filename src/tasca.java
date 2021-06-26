@@ -28,29 +28,6 @@ public class tasca
 		System.out.println("Developed by Piyush Sharma");
 	}
 	
-	private static void outroMsg() 
-	{
-		System.out.println("\nAll the screenshots have been saved!");
-		System.out.println("Thank you for using the app!");
-		System.out.println("\n######################################################################\n");
-	}
-
-	public static void captureScreenShot(int num) throws IOException, AWTException
-	{
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Rectangle screenRectangle = new Rectangle(screenSize);
-		Robot r = new Robot();
-		BufferedImage screenShot = r.createScreenCapture(screenRectangle);
-		String filename = "screenshot"+(num+1)+".jpeg";
-		ImageIO.write(screenShot, "jpeg", new File(filename));
-	}
-	
-	public static void timeBreak(int time) throws AWTException
-	{
-		Robot r = new Robot();
-		r.delay(time*1000);
-	}
-
 	public static int[] inputVariables()
 	{
 		Scanner s = new Scanner(System.in);
@@ -117,5 +94,28 @@ public class tasca
 			picSize--;
 			System.out.println("Screenshot " + (total-picSize) + " has been saved in bin folder of project");
 		}
+	}
+
+	public static void captureScreenShot(int num) throws IOException, AWTException
+	{
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		Rectangle screenRectangle = new Rectangle(screenSize);
+		Robot r = new Robot();
+		BufferedImage screenShot = r.createScreenCapture(screenRectangle);
+		String filename = "screenshot"+(num+1)+".jpeg";
+		ImageIO.write(screenShot, "jpeg", new File(filename));
+	}
+	
+	public static void timeBreak(int time) throws AWTException
+	{
+		Robot r = new Robot();
+		r.delay(time*1000);
+	}
+	
+	private static void outroMsg() 
+	{
+		System.out.println("\nAll the screenshots have been saved!");
+		System.out.println("Thank you for using the app!");
+		System.out.println("\n######################################################################\n");
 	}
 }
